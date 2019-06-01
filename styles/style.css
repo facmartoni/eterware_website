@@ -10,4 +10,20 @@
     --money-color: #449E00; 
     --error-color: #FF2424; 
 
+    /* Espaciado */
+
+    --space-small: 8px; 
+    --space-medium: 16px; 
+    --space-big: 32px; 
+
+    /* Tipografia */
+
+    --h1: 20px; 
+    --h2: 18px; 
+    --text: 12px; 
+    --small: 10px; 
+
 }
+
+
+
