@@ -32,7 +32,7 @@
 body{
     display: grid; 
     grid-template-rows: 40px 260px 1fr 40px;
-    grid-template-columns: 100vw; 
+    grid-template-columns: 100%; 
     grid-template-areas: "header"
                          "hero"
                          "main"
@@ -76,8 +76,7 @@ header{
 }
 
 .language_button{
-    margin-right: 8px;
-    margin-right: var(--space-small);  
+    margin-right: .8em; 
 }
 
 .menu_button img, .logo img, .language_button img{
@@ -211,6 +210,7 @@ b{
 
 .body_image{
     width: 150px
+
 }
 
 .body_image img{
@@ -276,7 +276,7 @@ b{
     width: 30%;
     display: flex; 
     align-items: center; 
-    flex-direction: column; 
+    flex-direction: column
 }
 
 .what_we_can_give_you_image{
@@ -294,7 +294,7 @@ b{
 
 /* Start What we did */
 
-.what_we_did{
+.what_we_did, .what_we_did_hyperlink{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -308,7 +308,7 @@ b{
 
 /* Start Our quality */
 
-.our_quality{
+.our_quality, .our_quality_container{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -328,7 +328,7 @@ b{
 
 /* Start Contact us */
 
-.contact_us, form{
+.contact_us, form, .contact_us_container{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -336,7 +336,7 @@ b{
 
 form{
     width: 100%;
-    max-width: 330px;
+    max-width: 330px
 }
 
 .form_input{
@@ -356,6 +356,7 @@ form{
     background: var(--background-color);
     border: 1px solid #333434;
     border: 1px solid var(--header-color)
+
 }
 
 /* Lo siguiente hace que desaparezca el placeholder cuando se hace focus en el input */
@@ -365,10 +366,10 @@ input:focus::-moz-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
 input:focus:-ms-input-placeholder { color:transparent; } 
 
-textarea{
+.textarea{
     font-family: 'Open Sans', sans-serif; 
     min-height: 150px;
-    resize: none;
+    resize: none
 }
 
 /* Lo siguiente también quita el placeholder del textarea */
@@ -382,7 +383,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1;
+    opacity: 1
 } 
 
 ::-moz-placeholder{
@@ -390,7 +391,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1;
+    opacity: 1
 } 
 
 :-ms-input-placeholder{
@@ -398,7 +399,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1;
+    opacity: 1
 } 
 
 ::-ms-input-placeholder{
@@ -406,7 +407,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1;
+    opacity: 1
 } 
 
 ::placeholder{
@@ -414,7 +415,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1;
+    opacity: 1
 }
 
 .btn_enviar{
@@ -431,7 +432,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     font-weight: 700;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .btn_enviar:active{
@@ -446,7 +447,8 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
 .social_networks{
     display: flex; 
     align-items: center; 
-    flex-direction: column; 
+    flex-direction: column
+    
 }
 
 .social_container{
@@ -483,7 +485,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
 /* Start footer */
 
 footer{
-    grid-area: footer; 
+    grid-area: footer;
     height: 40px;
     background: #333434;
     background: var(--header-color);
@@ -501,6 +503,14 @@ footer{
 }
 
 /* End footer */
+
+/* Start Special classes */
+
+.disappear{
+    display: none; 
+}
+
+/* End Special classes */
 
 /* ++++++++++ Media Queries ++++++++++ */
 
@@ -588,6 +598,7 @@ body{
 
 .body_image{
         width: 250px
+
 }
 
 .the_price_category{
@@ -619,6 +630,7 @@ body{
         margin-bottom: var(--space-small);
         padding-left: 8px;
         padding-left: var(--space-small)
+
 }
 
 .social_container{
@@ -675,6 +687,36 @@ header{
 .what_we_did_image{
         width: 550px
 } 
+
+::-webkit-input-placeholder{
+        font-size: 12px;
+        font-size: var(--text)
+} 
+
+::-moz-placeholder{
+        font-size: 12px;
+        font-size: var(--text)
+} 
+
+:-ms-input-placeholder{
+        font-size: 12px;
+        font-size: var(--text)
+} 
+
+::-ms-input-placeholder{
+        font-size: 12px;
+        font-size: var(--text)
+} 
+
+::placeholder{
+        font-size: 12px;
+        font-size: var(--text)
+}
+
+.btn_enviar{
+        font-size: 12px;
+        font-size: var(--text)
+} 
     }
 
 @media screen and (min-width: 768px){
@@ -712,6 +754,11 @@ header{
 
 h1{
         margin: 0
+}
+
+.container{
+        margin: 16px 16px calc(8px / 2);
+        margin: var(--space-medium) var(--space-medium) calc(var(--space-small) / 2)
 }
 
 .what_we_are{
@@ -756,5 +803,268 @@ h1{
 
 .the_price_custom{
         padding: 0 10%
+}
+
+.what_we_did_container{
+        width: 100%; 
+        display: flex; 
+        flex-direction: row-reverse; 
+        justify-content: space-around; 
+        align-items: center
+}
+
+.what_we_did_container .text{
+        max-width: 280px
+}
+
+.what_we_did_image{
+        width: 360px
+}
+
+.our_quality_container{
+        display: grid; 
+        grid-template-rows: repeat(3, 1fr); 
+        grid-template-columns: 3fr 7fr 3fr; 
+        grid-template-areas: "image_1 text_1 text_1"
+                             "text_2 text_2 image_2"
+                             "image_3 text_3 text_3";
+        grid-row-gap: 8px;
+        grid-row-gap: var(--space-small);
+        justify-items: center; 
+        margin-top: 32px; 
+        margin-top: var(--space-big)
+}
+
+.our_quality .text{
+        margin-bottom: 0
+}
+
+.our_quality .text:nth-of-type(1){
+        grid-area: text_1; 
+        margin-bottom: 16px; 
+        margin-bottom: var(--space-medium)
+}
+
+.our_quality .text:nth-of-type(2){
+        grid-area: text_2
+}
+
+.our_quality .text:nth-of-type(3){
+        grid-area: text_3
+}
+
+.our_quality_image:nth-of-type(1){
+        grid-area: image_1
+}
+
+.our_quality_image:nth-of-type(2){
+        grid-area: image_2; 
+        margin-left: 30px; 
+        width: 200px
+}
+
+.our_quality_image:nth-of-type(3){
+        grid-area: image_3
+}
+
+.contact_us_container{
+        width: 100%;
+        flex-direction: row; 
+        justify-content: space-evenly
+}
+
+.contact_us_container .text{
+        text-align: left; 
+        width: 300px
+}
+
+form{
+        margin-left: 32px;
+        margin-left: var(--space-big)
+}
+
+.form_input{
+        margin-bottom: calc(8px / 2);
+        margin-bottom: calc(var(--space-small) / 2); 
+        font-size: 10px; 
+        font-size: var(--small)
+
+} 
+
+.textarea{
+        font-size: calc(10px - 4px);
+        font-size: calc(var(--small) - 4px)
+}
+
+.social_networks{
+        width: 100%; 
+        flex-direction: row-reverse;
+        justify-content: space-around
+    
+}
+
+.social_networks .title{
+        font-size: 12px;
+        font-size: var(--text); 
+        width: 300px
+
+}
+
+.social_container{
+        width: 250px
+}
+
+.social_network_image{
+        width: 80px
+}
+
+.thanks .text{
+        font-size: 10px;
+        font-size: var(--small)
+}
+    }
+
+@media screen and (min-width: 1024px){
+
+:root{
+        --h1: 42px; 
+        --h2: 36px; 
+        --h3: 30px; 
+        --text: 26px; 
+        --small: 22px
+}
+
+body{
+        grid-template-rows: 50px 500px 1fr 40px
+}
+
+.the_price_category{
+        margin: 0 1.9em
+}
+
+.what_we_can_give_you_element{
+        width: 250px
+}
+
+.what_we_did_container .text{
+        max-width: 340px
+}
+
+.what_we_did_image{
+        width: 450px
+}
+
+.contact_us_container .text{
+        width: 500px
+} 
+
+::-webkit-input-placeholder{
+        font-size: 10px;
+        font-size: var(--small)
+} 
+
+::-moz-placeholder{
+        font-size: 10px;
+        font-size: var(--small)
+} 
+
+:-ms-input-placeholder{
+        font-size: 10px;
+        font-size: var(--small)
+} 
+
+::-ms-input-placeholder{
+        font-size: 10px;
+        font-size: var(--small)
+} 
+
+::placeholder{
+        font-size: 10px;
+        font-size: var(--small)
+}
+
+.btn_enviar{
+        font-size: 10px;
+        font-size: var(--small)
+}
+
+.social_container{
+        width: 320px
+}
+
+.social_network_image{
+        width: 100px
+}
+
+.thanks .text{
+        font-size: calc(10px - 8px);
+        font-size: calc(var(--small) - 8px)
+}
+    }
+
+@media screen and (min-width: 1280px){
+
+:root{
+        --h1: 56px; 
+        --h2: 36px; 
+        --h3: 30px; 
+        --text: 22px; 
+        --small: 18px
+}
+
+body{
+        grid-template-rows: 50px calc(100vh - 50px) 1fr 40px
+}
+
+.hero_image{
+        width: 100%;
+        margin-left: - 64px;
+        margin-left: - var(--space-large)
+}
+
+.hero_title{
+        padding: 180px 80px 160px 0
+}
+
+.what_we_are_first_container{
+        margin: 0 16px;
+        margin: 0 var(--space-medium)
+}
+
+.what_we_are_first_container  .text{
+        text-align: center
+}
+
+.what_we_are_image{
+        width: 300px
+}
+
+.what_we_are_second_container{
+        padding: 0 25%
+}
+
+.the_price_category{
+        margin: 0
+}
+
+.the_price_image{
+        width: 400px
+}
+
+.what_we_did_container .text{
+        max-width: 400px
+}
+
+.what_we_did_image{
+        width: 600px
+}
+
+form{
+        max-width: 400px
+}
+
+.thanks .text{
+        font-size: calc(10px - 4px);
+        font-size: calc(var(--small) - 4px)
 }
     }

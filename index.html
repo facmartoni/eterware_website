@@ -105,7 +105,7 @@
         <p class="text">Eterware es una empresa que desarrolla <b>sitios web modernos</b> con la <b>última tecnología</b>, y te posiciona a vos y a tu marca en un escaño social considerablemente más alto</p>
     </div>
     <div class="what_we_are_image_container">
-        <figure class="what_we_are_image body_image">
+        <figure class="body_image what_we_are_image">
             <img src="./res/que_somos.png" alt="Imagen">
         </figure>
     </div>
@@ -166,7 +166,7 @@
             <figure class="what_we_can_give_you_image body_image">
                 <img src="./res/fotos.png" alt="Imagen de Fotos">
             </figure>
-            <p class="text">Fotos que te representen</p>
+            <p class="text">Fotos que te<br> representen</p>
         </div>
         <div class="what_we_can_give_you_element">
             <figure class="what_we_can_give_you_image youtube body_image">
@@ -190,7 +190,7 @@
             <figure class="what_we_can_give_you_image body_image">
                 <img src="./res/icono_personalizado.png" alt=" Imagen de icono personalizado">
             </figure>
-            <p class="text">Un ícono personalizado</p>
+            <p class="text">Un ícono <br>personalizado</p>
         </div>
         <div class="what_we_can_give_you_element">
             <figure class="what_we_can_give_you_image links_a_redes body_image">
@@ -220,13 +220,17 @@
 <section class="what_we_did" id="what_we_did">
     <h2 class="title">Gente con la que trabajamos</h2>
     <h3 class="subtitle">Liceo Militar</h3>
-    <p class="text">El Liceo Militar es un colegio de la provincia de Tucumán, Argentina, con el que actualmente trabajamos en la siguiente plataforma web</p>
-    <a target="_blank" href="https://facmartoni.github.io/liceo_militar/">
-        <figure class="what_we_did_image body_image">
-            <img src="./res/liceo_militar.png" alt="Diseño del Liceo Militar">
-        </figure>
-    </a>
-    <a class="text body_anchor" target="_blank" href="https://facmartoni.github.io/liceo_militar/">Liceo Militar</a>
+    <div class="what_we_did_container">
+        <p class="text">El Liceo Militar es un colegio de la provincia de Tucumán, Argentina, con el que actualmente trabajamos en la siguiente plataforma web</p>
+        <div class="what_we_did_hyperlink">
+            <a target="_blank" href="https://facmartoni.github.io/liceo_militar/">
+            <figure class="what_we_did_image body_image">
+                <img src="./res/liceo_militar.png" alt="Diseño del Liceo Militar">
+            </figure>
+            </a>
+            <a class="text body_anchor" target="_blank" href="https://facmartoni.github.io/liceo_militar/">Liceo Militar</a>
+        </div>
+    </div>
     <p class="text">Vos y tu organización pueden tener algo de la misma calidad, <a class="text body_anchor" href="#contact_us">animate!</a></p>
 </section>
 
@@ -237,18 +241,20 @@
 <section class="our_quality" id="our_quality">
     <h2 class="title">¿Por qué nuestra calidad es tan alta?</h2>
     <p class="text">Nuestros sitios están diseñados <b>desde cero</b>, desde las medidas, paletas de colores y tipografía, hasta la arquitectura y estructuración de la información. El código fuente de cada plataforma también es creado a partir de la nada, sin usar moldes predefinidos o plantillas. Esto permite una serie de cosas que no vas a encontrar en otro lugar:</p>
-    <p class="text">> <b>Colores únicos</b>: Nuestras métricas de diseño son excepcionales, pudiendo generar con exactitud los colores que definen a tu marca</p>
-    <figure class="our_quality_image body_image">
-        <img src="./res/circulo_cromatico.png" alt="Círculo cromático">
-    </figure>
-    <p class="text">> <b>Diseño adaptable a todas las pantallas</b>: Tus páginas van a verse bien en teléfonos, tablets, portátiles, computadoras de escritorio y hasta televisores</p>
-    <figure class="our_quality_image body_image">
-        <img src="./res/responsive_design.png" alt="Diseño adaptable">
-    </figure>
-    <p class="text">> <b>Posicionamiento en Google (SEO)</b>: No va a ser raro que una vez dado de alta tu sitio, el mismo aparezca en la primera página del mega buscador</p>
-    <figure class="our_quality_image body_image">
-        <img src="./res/google.jpg" alt="Logo de Google">
-    </figure>
+    <div class="our_quality_container">
+        <p class="text">> <b>Colores únicos</b>: Nuestras métricas de diseño son excepcionales, pudiendo generar con exactitud los colores que definen a tu marca</p>
+        <figure class="our_quality_image body_image">
+            <img src="./res/circulo_cromatico.png" alt="Círculo cromático">
+        </figure>
+        <p class="text">> <b>Diseño adaptable a todas las pantallas</b>: Tus páginas van a verse bien en teléfonos, tablets, portátiles, computadoras de escritorio y hasta televisores</p>
+        <figure class="our_quality_image body_image">
+            <img src="./res/responsive_design.png" alt="Diseño adaptable">
+        </figure>
+        <p class="text">> <b>Posicionamiento en Google (SEO)</b>: No va a ser raro que una vez dado de alta tu sitio, el mismo aparezca en la primera página del mega buscador</p>
+        <figure class="our_quality_image body_image">
+            <img src="./res/google.jpg" alt="Logo de Google">
+        </figure>
+    </div>
 </section>
 
 <!-- End Our quality -->
@@ -257,13 +263,15 @@
 
 <section class="contact_us" id="contact_us">
     <h2 class="title">Innová con nosotros, contactanos</h2>
-    <p class="text">Rellená el siguiente formulario o enviá un email a <a class="text body_anchor" href="mailto:eterware@gmail.com">eterware@gmail.com</a>. Podés llamar también al <a class="text body_anchor" href="tel:+5493816378744">+5493816378744</a></p>
-    <form action="">
-        <input class="form_input" type="text" name="name_input" id="name_input" placeholder="Nombre" required>
-        <input class="form_input" type="email" name="email_input" id="email_input" placeholder="Email" required>
-        <textarea class="form_input" type="text" name="message_input" id="message_input" placeholder="Mensaje" required></textarea>
-        <input class="btn_enviar" type="submit" value="Enviar">
-    </form>
+    <div class="contact_us_container">
+        <p class="text">Rellená el siguiente formulario o enviá un email a <a class="text body_anchor" href="mailto:eterware@gmail.com">eterware@gmail.com</a>. Podés llamar también al <a class="text body_anchor" href="tel:+5493816378744">+5493816378744</a></p>
+        <form action="">
+            <input class="form_input" type="text" name="name_input" id="name_input" placeholder="Nombre" required>
+            <input class="form_input" type="email" name="email_input" id="email_input" placeholder="Email" required>
+            <textarea class="form_input textarea" type="text" name="message_input" id="message_input" placeholder="Mensaje" required></textarea>
+            <input class="btn_enviar" type="submit" value="Enviar">
+        </form>
+    </div>
 </section>
 
 <!-- End Contact us -->
