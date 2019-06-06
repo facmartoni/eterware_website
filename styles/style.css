@@ -89,7 +89,7 @@
     }
 }
 
-@custom-media --p370 screen and (width >= 370px);
+@custom-media --p370 screen and (width >= 360px);
 @custom-media --p410 screen and (width >= 410px);
 @custom-media --p480 screen and (width >= 480px);
 @custom-media --p600 screen and (width >= 600px);
@@ -148,11 +148,30 @@ header{
     left: 0;
     right: 0;
     z-index: 2;
-    opacity: 1;
+    opacity: .9;
 
     @media (--p600){
         height: 50px;
     }
+}
+
+.anchors_wrapper{
+    @media (--p1280){
+        width: 80%;
+    }
+}
+
+.anchors_wrapper:nth-of-type(1){
+    @media (--p1280){
+        margin-left: 2.6em; 
+    }
+}
+
+.anchors_first_container, .anchors_second_container{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 100%; 
 }
 
 .menu_button, .logo, .language_button{
@@ -166,7 +185,7 @@ header{
 }
 
 .menu_button{
-    margin-left: .8em; 
+    margin-left: .8em;  
 }
 
 .logo{
@@ -186,6 +205,13 @@ header{
     height: 100%; 
 }
 
+.menu_button img{
+    @media (--p1280){
+        display: none; 
+    }
+}
+
+
 /* End Header */
 
 /* Start Menu */
@@ -195,7 +221,40 @@ nav{
     top: -100vh; 
     height: calc(100vh - 40px);
     width: 100vw; 
-    background: var(--header-color); 
+    background: var(--header-color);
+    transition: .3s; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    
+    @media (--p600){
+        height: calc(100vh - 50px);
+    }
+}
+
+.unfold{
+    top: 40px; 
+
+    @media (--p600){
+        top: 50px; 
+    }
+}
+
+.menu_list{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    flex-direction: column; 
+    height: 80%;
+}
+
+.menu_anchor{
+    cursor: pointer;
+    color: var(--white-color); 
+
+    @media (--p1280){
+        font-size: calc(var(--small) - 4px); 
+    }
 }
 
 /* End Menu */
@@ -368,7 +427,7 @@ b{
 
     @media (--p768){
         display: grid;
-        grid-template-rows: auto 60% 40%; 
+        grid-template-rows: repeat(3, auto); 
         grid-template-columns: 60% 40%;
         grid-template-areas: "title title"
                              "first_text image"
@@ -440,7 +499,7 @@ b{
 .the_price{
     display: flex; 
     flex-direction: column; 
-    align-items: center; 
+    align-items: center;
 }
 
 .price_title{
@@ -785,6 +844,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: var(--placeholder-color);
     opacity: 1;
+    line-height: 1; 
 
     @media (--p600){
         font-size: var(--text); 
@@ -793,6 +853,10 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     @media (--p1024){
         font-size: var(--small); 
     }
+}
+
+::-moz-placeholder{
+    line-height: 0; 
 }
 
 .btn_enviar{
@@ -806,6 +870,7 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
+    appearance: none;
 
     @media (--p600){
         font-size: var(--text); 
@@ -954,6 +1019,15 @@ footer{
 
 .disappear{
     display: none; 
+}
+
+.overflow_hidden{
+    overflow: hidden; 
+}
+
+.reduce_menu_button_width{
+    margin-left: .3em;
+    width: 80% !important; 
 }
 
 /* End Special classes */

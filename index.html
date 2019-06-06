@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,22 +41,32 @@
     <title>Eterware</title>
 
 </head>
-<body>
+<body id="body">
     
 <!-- Start Header -->
 
-<header>
-    <figure class="menu_button">
-        <img src="./res/Menu_first_state.svg" alt="Botón menu">
+<header id="header">
+    <figure class="menu_button" id="menu_button">
+        <img id="menu_button_image" src="./res/Menu_first_state.png" alt="Botón menu">
     </figure>
+    <div class="anchors_wrapper">
+        <ul id="anchors_first_container" class="anchors_first_container">
+
+        </ul>
+    </div>
     <a href="./">
         <figure class="logo">
-            <img src="./res/isotipo_transparente.svg" alt="Logo de Eterware">
+            <img src="./res/isotipo_transparente.png" alt="Logo de Eterware">
         </figure>
     </a>
+    <div class="anchors_wrapper">
+        <ul id="anchors_second_container" class="anchors_second_container">
+
+        </ul>
+    </div>
     <a href="./en/">
-        <figure class="language_button">
-            <img src="./res/Language_first_state.svg" alt="Cambiar idioma">
+        <figure class="language_button" id="language_button">
+            <img src="./res/Language_first_state.png" alt="Cambiar idioma">
         </figure>
     </a>
 </header>
@@ -65,14 +75,14 @@
 
 <!-- Start Menu -->
 
-<nav>
-    <ul>
-        <li> <a onclick="$('#what_we_are').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">> ¿Qué Somos?</a> </li>
-        <li> <a onclick="$('#the_price').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">> El precio</a> </li>
-        <li> <a onclick="$('#what_we_can_give_you').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">> Lo que podemos darte</a> </li>
-        <li> <a onclick="$('#what_we_did').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">> Lo que hicimos</a> </li>
-        <li> <a onclick="$('#our_quality').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">> Nuestra calidad</a> </li>
-        <li> <a onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart'});">> Contactanos</a> </li>
+<nav id="menu">
+    <ul class="menu_list">
+        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#what_we_are').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> ¿Qué Somos?</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#the_price').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> El precio</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#what_we_can_give_you').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> Lo que podemos darte</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#what_we_did').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Lo que hicimos</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#our_quality').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Nuestra calidad</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">> Contactanos</a> </li>
     </ul>
 </nav>
 

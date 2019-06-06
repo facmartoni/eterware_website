@@ -58,7 +58,14 @@ header{
     left: 0;
     right: 0;
     z-index: 2;
-    opacity: 1
+    opacity: .9
+}
+
+.anchors_first_container, .anchors_second_container{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 100%; 
 }
 
 .menu_button, .logo, .language_button{
@@ -68,7 +75,7 @@ header{
 }
 
 .menu_button{
-    margin-left: .8em; 
+    margin-left: .8em;  
 }
 
 .logo{
@@ -84,6 +91,7 @@ header{
     height: 100%; 
 }
 
+
 /* End Header */
 
 /* Start Menu */
@@ -94,7 +102,29 @@ nav{
     height: calc(100vh - 40px);
     width: 100vw; 
     background: #333434; 
-    background: var(--header-color); 
+    background: var(--header-color);
+    transition: .3s; 
+    display: flex; 
+    align-items: center;
+    justify-content: center
+}
+
+.unfold{
+    top: 40px
+}
+
+.menu_list{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    flex-direction: column; 
+    height: 80%;
+}
+
+.menu_anchor{
+    cursor: pointer;
+    color: #FFFFFF;
+    color: var(--white-color)
 }
 
 /* End Menu */
@@ -236,7 +266,7 @@ b{
 .the_price{
     display: flex; 
     flex-direction: column; 
-    align-items: center; 
+    align-items: center;
 }
 
 .price_title{
@@ -383,7 +413,8 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1
+    opacity: 1;
+    line-height: 1
 } 
 
 ::-moz-placeholder{
@@ -391,7 +422,8 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1
+    opacity: 1;
+    line-height: 1
 } 
 
 :-ms-input-placeholder{
@@ -399,7 +431,8 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1
+    opacity: 1;
+    line-height: 1
 } 
 
 ::-ms-input-placeholder{
@@ -407,7 +440,8 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1
+    opacity: 1;
+    line-height: 1
 } 
 
 ::placeholder{
@@ -415,7 +449,12 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     color: #989898;
     color: var(--placeholder-color);
-    opacity: 1
+    opacity: 1;
+    line-height: 1
+}
+
+::-moz-placeholder{
+    line-height: 0; 
 }
 
 .btn_enviar{
@@ -432,7 +471,10 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
     font-size: var(--h2);
     font-weight: 700;
     border-radius: 5px;
-    cursor: pointer
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none
 }
 
 .btn_enviar:active{
@@ -510,11 +552,20 @@ footer{
     display: none; 
 }
 
+.overflow_hidden{
+    overflow: hidden; 
+}
+
+.reduce_menu_button_width{
+    margin-left: .3em;
+    width: 80% !important; 
+}
+
 /* End Special classes */
 
 /* ++++++++++ Media Queries ++++++++++ */
 
-@media screen and (min-width: 370px){
+@media screen and (min-width: 360px){
 
 :root{
         --h1: 22px;
@@ -672,6 +723,14 @@ header{
         width: 4.2em
 }
 
+nav{
+        height: calc(100vh - 50px)
+}
+
+.unfold{
+        top: 50px
+}
+
 .hero{
         padding-top: 20px
 }
@@ -763,7 +822,7 @@ h1{
 
 .what_we_are{
         display: grid;
-        grid-template-rows: auto 60% 40%; 
+        grid-template-rows: repeat(3, auto); 
         grid-template-columns: 60% 40%;
         grid-template-areas: "title title"
                              "first_text image"
@@ -1014,6 +1073,23 @@ body{
 
 body{
         grid-template-rows: 50px calc(100vh - 50px) 1fr 40px
+}
+
+.anchors_wrapper{
+        width: 80%
+}
+
+.anchors_wrapper:nth-of-type(1){
+        margin-left: 2.6em
+}
+
+.menu_button img{
+        display: none
+}
+
+.menu_anchor{
+        font-size: calc(10px - 4px);
+        font-size: calc(var(--small) - 4px)
 }
 
 .hero_image{
