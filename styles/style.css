@@ -1048,6 +1048,14 @@ footer{
     opacity: 0; 
 }
 
+.green_color{
+    color: var(--money-color); 
+}
+
+.white_color{
+    color: var(--white-color); 
+}
+
 /* End Special classes */
 
 /* ++++++++++ Media Queries ++++++++++ */

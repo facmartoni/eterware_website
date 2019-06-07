@@ -84,10 +84,39 @@ const sendEmail = (event) => {
         To : 'eterware@gmail.com',
         From : 'eterware@gmail.com',
         Subject : `${$inputName.value}, de la web de Eterware`,
-        Body : $inputBody.value,
+        Body : `${$inputBody.value} \n Mi email es: ${$inputEmail.value}`
     }).then(
-      message => alert(message)
-    );
+      message => {
+          if(message == 'OK'){
+            Swal.fire({
+                position: 'center',
+                type: 'success',
+                text: 'Gracias por tu mensaje! Estamos en contacto ;)',
+                showConfirmButton: false,
+                timer: 3000
+              })
+          }
+          else{
+            Swal.fire({
+                position: 'center',
+                type: 'error',
+                text: 'Algo anda mal :/ Intentá mandándonos un email o llamándonos',
+                showConfirmButton: false,
+                timer: 4000
+              })
+          }
+      }
+    )
+    .catch(error => {
+        Swal.fire({
+            position: 'center',
+            type: 'error',
+            text: 'Algo anda mal :/ Intentá mandándonos un email o llamándonos',
+            showConfirmButton: false,
+            timer: 2000
+          })
+        console.log(error); 
+    })
 } 
 
 // Pila de ejecución

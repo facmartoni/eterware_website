@@ -77,12 +77,12 @@
 
 <nav id="menu">
     <ul class="menu_list">
-        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#what_we_are').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> ¿Qué Somos?</a> </li>
-        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#the_price').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> El precio</a> </li>
-        <li class="menu_anchor_first"> <a class="title menu_anchor" onclick="$('#what_we_can_give_you').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> Lo que podemos darte</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#what_we_did').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Lo que hicimos</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#our_quality').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Nuestra calidad</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">> Contactanos</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_one" onclick="$('#what_we_are').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> ¿Qué Somos?</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_two" onclick="$('#the_price').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> El precio</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_three" onclick="$('#what_we_can_give_you').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> Lo que podemos darte</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_four" onclick="$('#what_we_did').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Lo que hicimos</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_five" onclick="$('#our_quality').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Nuestra calidad</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_six" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">> Contactanos</a> </li>
     </ul>
 </nav>
 
@@ -155,7 +155,7 @@
             <p class="text_money">19999 ARS / 500 USD</p>
         </div>
     </div>
-    <p class="text the_price_custom">¿Pensás que no entrás en ninguna de estas categorías? ¿Necesitás un trabajo aún más personalizado? <a class="text body_anchor" href="#contact_us">Contactanos</a> y te damos asesoramiento</p>
+    <p class="text the_price_custom">¿Pensás que no entrás en ninguna de estas categorías? ¿Necesitás un trabajo aún más personalizado? <a class="text body_anchor" href="#contact_us" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">Contactanos</a> y te damos asesoramiento</p>
 </section>
 
 <!-- End The price -->
@@ -241,7 +241,7 @@
             <a class="text body_anchor" target="_blank" href="https://facmartoni.github.io/liceo_militar/">Liceo Militar</a>
         </div>
     </div>
-    <p class="text">Vos y tu organización pueden tener algo de la misma calidad, <a class="text body_anchor" href="#contact_us">animate!</a></p>
+    <p class="text">Vos y tu organización pueden tener algo de la misma calidad, <a class="text body_anchor" href="#contact_us" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">animate!</a></p>
 </section>
 
 <!-- End What we did -->
@@ -277,7 +277,7 @@
         <p class="text">Rellená el siguiente formulario o enviá un email a <a class="text body_anchor" href="mailto:eterware@gmail.com">eterware@gmail.com</a>. Podés llamar también al <a class="text body_anchor" href="tel:+5493816378744">+5493816378744</a></p>
         <form action="" id="form">
             <input class="form_input" type="text" name="name_input" id="name_input" placeholder="Nombre" required>
-            <input class="form_input" type="text" name="email_input" id="email_input" placeholder="Telefono" required>
+            <input class="form_input" type="email" name="email_input" id="email_input" placeholder="Email" required>
             <textarea class="form_input textarea"type="text" name="message_input" id="message_input" placeholder="Mensaje" required></textarea>
             <input class="btn_enviar animated" onclick="sendEmail" id="button_send" type="submit" value="Enviar">
         </form>
@@ -334,6 +334,7 @@
 
 <!-- Start Scripts -->
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>

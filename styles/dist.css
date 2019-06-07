@@ -582,6 +582,16 @@ footer{
     opacity: 0; 
 }
 
+.green_color{
+    color: #449E00;
+    color: var(--money-color); 
+}
+
+.white_color{
+    color: #FFFFFF;
+    color: var(--white-color); 
+}
+
 /* End Special classes */
 
 /* ++++++++++ Media Queries ++++++++++ */

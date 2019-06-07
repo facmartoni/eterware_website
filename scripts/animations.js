@@ -42,6 +42,26 @@ const applyAnimationText = $list => {
     }
 }
 
+const applyClassToggleMenu = (sectionElement, menuElement, classAdded = 'green_color') => {
+    new ScrollMagic.Scene({triggerElement: sectionElement})
+        .setClassToggle(menuElement, classAdded)
+        .addTo(controller);
+}
+
+// Menu class toggle
+
+applyClassToggleMenu('#what_we_are', '#menu_element_one');
+applyClassToggleMenu('#the_price', '#menu_element_one', 'white_color');
+applyClassToggleMenu('#the_price', '#menu_element_two');
+applyClassToggleMenu('#what_we_can_give_you', '#menu_element_two', 'white_color');
+applyClassToggleMenu('#what_we_can_give_you', '#menu_element_three');
+applyClassToggleMenu('#what_we_did', '#menu_element_three', 'white_color');
+applyClassToggleMenu('#what_we_did', '#menu_element_four');
+applyClassToggleMenu('#our_quality', '#menu_element_four', 'white_color');
+applyClassToggleMenu('#our_quality', '#menu_element_five');
+applyClassToggleMenu('#contact_us', '#menu_element_five', 'white_color');
+applyClassToggleMenu('#contact_us', '#menu_element_six');
+
 // Texts animations
 
 applyAnimationText($titles);
