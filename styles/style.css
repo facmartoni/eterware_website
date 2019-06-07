@@ -226,6 +226,7 @@ nav{
     display: flex; 
     align-items: center;
     justify-content: center; 
+    z-index: 2;
     
     @media (--p600){
         height: calc(100vh - 50px);
@@ -338,6 +339,7 @@ nav{
     }
 }
 
+
 h1{
     font-size: var(--h1); 
     font-weight: 400; 
@@ -346,6 +348,18 @@ h1{
     @media (--p768){
         margin: 0;
     }
+}
+
+.hero_text:nth-of-type(1){
+    animation-delay: .75s; 
+}
+
+.hero_text:nth-of-type(2){
+    animation-delay: 1.25s; 
+}
+
+.hero_text:nth-of-type(3){
+    animation-delay: 1.75s; 
 }
 
 /* End Hero */
@@ -1028,6 +1042,10 @@ footer{
 .reduce_menu_button_width{
     margin-left: .3em;
     width: 80% !important; 
+}
+
+.without_opacity{
+    opacity: 0; 
 }
 
 /* End Special classes */

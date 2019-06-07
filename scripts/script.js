@@ -11,6 +11,10 @@ const $menuAnchorsFirstList = document.getElementsByClassName('menu_anchor_first
 const $menuAnchorsSecondList = document.getElementsByClassName('menu_anchor_second');
 const $anchorsFirstContainer = document.getElementById('anchors_first_container'); 
 const $anchorsSecondContainer = document.getElementById('anchors_second_container'); 
+const $form = document.getElementById('form'); 
+const $inputEmail = document.getElementById('email_input');
+const $inputName = document.getElementById('name_input');
+const $inputBody = document.getElementById('message_input');
 
 // Variables varias
 
@@ -71,6 +75,22 @@ const controlMenu = () => {
     }
 }
 
+const sendEmail = (event) => {
+    event.preventDefault(); 
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "eterware@gmail.com",
+        Password : "7f42cbac-b8bc-4570-a34f-05ed135677f4",
+        To : 'eterware@gmail.com',
+        From : 'eterware@gmail.com',
+        Subject : `${$inputName.value}, de la web de Eterware`,
+        Body : $inputBody.value,
+    }).then(
+      message => alert(message)
+    );
+} 
+
 // Pila de ejecución
 
 controlMenu(); 
+$form.addEventListener('submit', sendEmail); 
