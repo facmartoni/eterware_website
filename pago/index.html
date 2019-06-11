@@ -79,12 +79,12 @@
 
 <nav id="menu">
     <ul class="menu_list">
-        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_one" href="../#what_we_are" onclick="$('#what_we_are').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> ¿Qué Somos?</a> </li>
-        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_two" onclick="$('#the_price').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> El precio</a> </li>
-        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_three" onclick="$('#what_we_can_give_you').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 60});">> Lo que podemos darte</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_four" onclick="$('#what_we_did').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Lo que hicimos</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_five" onclick="$('#our_quality').animatescroll({scrollSpeed:2000,easing:'easeOutBack',padding: 30});">> Nuestra calidad</a> </li>
-        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_six" onclick="$('#contact_us').animatescroll({scrollSpeed:2000,easing:'easeOutQuart',padding: 30});">> Contactanos</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_one" href="../#what_we_are">> ¿Qué Somos?</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_two" href="../#the_price">> El precio</a> </li>
+        <li class="menu_anchor_first"> <a class="title menu_anchor" id="menu_element_three" href="../#what_we_can_give_you">> Lo que podemos darte</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_four" href="../#what_we_did">> Lo que hicimos</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_five" href="../#our_quality">> Nuestra calidad</a> </li>
+        <li class="menu_anchor_second"> <a class="title menu_anchor" id="menu_element_six" href="../#contact_us">> Contactanos</a> </li>
     </ul>
 </nav>
 
@@ -94,99 +94,171 @@
 
 <section class="payment">
     <h2 class="title">Aquí podés pagar</h2>
-    <p class="text">Tranquilo. Tu dinero está seguro con nosotros, ya que trabajamos con tecnología de <b>Mercado Pago</b>.
-            ¿Querés abonar con <b>PayPal</b>? También podés hacerlo.</p>
+    <p class="text">Tranquilo. Tu dinero está seguro con nosotros, ya que trabajamos con tecnología de <a href="https://www.mercadopago.com.ar/" class="body_anchor" target="_blank">Mercado Pago</a>.
+            ¿Querés abonar con <a class="body_anchor" href="https://www.paypal.com/" target="_blank">PayPal</a>? También podés hacerlo.</p>
 
     <h2 class="title">Los medios de pago que aceptamos</h2>
     <p class="text">Tarjetas de crédito y débito internacionales y locales, transferencia bancaria (por Red Link),  Pago Fácil, Rapipago, Provincia NET, CobroExpress, y transferencia por Mercado Pago. En la pantalla de pago vas a poder ver todas las promociones bancarias que tenemos para ofrecerte!</p>
 
+    <!-- Pagos completos -->
+
     <h2 class="title">Por último, elegí el producto que
             vas a comprar</h2>
     <div class="payment_container">
+
+        <!-- Website individual - Pago completo -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/professional.png" alt="Website individual">
                 </figure>
                 <p class="title">Sitio web individual</p>
                 <p class="title"><b class="title">Pago completo</b> | <b class="title green_color">6999 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-d60a3a9e-fa65-494a-8f05-3bf51719de0b" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="NWNPS5XGPKCRA">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form> 
         </div>
+
+        <!-- Website para PyME - Pago completo -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/startup.png" alt="Website para startup">
                 </figure>
                 <p class="title">Sitio web para PyME</p>
                 <p class="title"><b class="title">Pago completo</b> | <b class="title green_color">12999 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-39867686-a097-4ed9-a404-80c91fe0f78c" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="SWPUXYJH7APUC">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>                
         </div>
+
+        <!-- Website para empresa - Pago completo -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/grandes_empresas.png" alt="Website empresarial">
                 </figure>
                 <p class="title">Sitio web empresarial</p>
                 <p class="title"><b class="title">Pago completo</b> | <b class="title green_color">19999 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-6d323ec0-1068-486a-ad65-b8b7391d379a" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="UA9U8HNVMU3XL">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
     </div>
+
+    <!-- Pagos parciales -->
+
     <h2 class="title">Si así lo preferís, podés realizar
             un pago de la mitad del total
              al principio, y la otra mitad cuando
             entreguemos tu Sitio </h2>
     <div class="payment_container">
+
+        <!-- Website individual - Pago parcial -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/professional.png" alt="Website individual">
                 </figure>
                 <p class="title">Sitio web individual</p>
                 <p class="title"><b class="title">Pago parcial</b> | <b class="title green_color">3499 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-79ded14c-b0de-48a9-b156-0e9e90638ef2" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="ECUCWTLNHFCR8">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
+
+        <!-- Website para PyME - Pago parcial -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/startup.png" alt="Website para startup">
                 </figure>
                 <p class="title">Sitio web para PyME</p>
                 <p class="title"><b class="title">Pago parcial</b> | <b class="title green_color">6499 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-d710952b-313a-49b5-9f26-11730f7435b5" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="J2SUQYWQ8AVSC">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
+
+        <!-- Website para empresa - Pago parcial -->
+
         <div class="payment_element">
-            <div class="payment_card">
+            <div class="payment_card animated without_opacity">
                 <figure class="payment_image">
                     <img src="../res/grandes_empresas.png" alt="Website empresarial">
                 </figure>
                 <p class="title">Sitio web empresarial</p>
                 <p class="title"><b class="title">Pago parcial</b> | <b class="title green_color">9999 ARS</b></p>
             </div>
-            <button class="btn_enviar payment_button">Pagar</button>
-            <button class="btn_enviar payment_button">
-                <img src="../res/PayPal.png" alt="Paypal">
-            </button>
+            <!-- Mercado Pago Button -->
+            <a mp-mode="dftl" href="https://www.mercadopago.com/mla/checkout/start?pref_id=11973051-1c7d4a03-f199-4fda-ba1e-97a3594f361f" name="MP-payButton" class="btn_enviar payment_button animated">Pagar</a>
+            <script type="text/javascript">
+            (function(){function $MPC_load(){window.$MPC_loaded !== true && (function(){var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.src = document.location.protocol+"//secure.mlstatic.com/mptools/render.js";var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);window.$MPC_loaded = true;})();}window.$MPC_loaded !== true ? (window.attachEvent ?window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;})();
+            </script>
+            <!-- PayPal Button -->
+            <form class="btn_enviar payment_button paypal_button animated" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="W3TLQKASK2GXE">
+                <input class="paypal_image" type="image" src="../res/PayPal.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
         </div>
+
     </div>
     <h2 class="title harangue">Hoy decidiste cambiar
             tu historia, es el primer paso
@@ -212,8 +284,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="../scripts/animatescroll.min.js"></script>
-<script src="../scripts/script.js"></script>
-<script src="../scripts/animations.js"></script>
+<script src="../scripts/script_payment.js"></script>
+<script src="../scripts/animations_payment.js"></script>
 
 <!-- End Scripts -->
 
