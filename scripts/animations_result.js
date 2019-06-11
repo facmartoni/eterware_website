@@ -3,12 +3,14 @@
 var controller = new ScrollMagic.Controller();
 
 const $logo = document.getElementById('logo'); 
-const $buttons = document.getElementsByClassName('btn_enviar'); 
-const $paymentCards = document.getElementsByClassName('payment_card'); 
 const $titles = document.getElementsByClassName('title'); 
 const $subtitles = document.getElementsByClassName('subtitle'); 
 const $texts = document.getElementsByClassName('text');
 const $smalls = document.getElementsByTagName('small'); 
+
+//Added
+
+const $resultImage = document.getElementById('result_image'); 
 
 const applyAnimation = ($element, animationName, reverseValue = true, offsetValue = 50) => {
     new ScrollMagic.Scene({
@@ -44,15 +46,3 @@ applyAnimationText($smalls);
 // Header animations
 
 applyAnimation($logo, 'rotateIn', false);
-
-// Buttons animations
-
-for (let i=0; i<$buttons.length; i++){
-    applyAnimation($buttons[i], 'rubberBand', false, 0); 
-}
-
-// Cards animations 
-
-for(let i=0; i<$paymentCards.length; i++){
-    applyAnimation($paymentCards[i], 'fadeIn', false); 
-}

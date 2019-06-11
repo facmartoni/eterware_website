@@ -1,0 +1,34 @@
+.menu_anchor{
+    text-decoration: none; 
+}
+
+.home_return{
+    @media (--p1024){
+        font-size: var(--small); 
+    }
+}
+
+.container{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+.result{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+.result_image{
+    width: 80vw; 
+    max-width: 250px;
+}
+
+.result_image img{
+    width: 100%;
+}
+
+
