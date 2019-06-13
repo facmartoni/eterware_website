@@ -122,4 +122,4 @@ const sendEmail = (event) => {
 // Pila de ejecución
 
 controlMenu(); 
-$form.addEventListener('submit', sendEmail); 
+$form.addEventListener('submit', checkIfCaptchaIsFilled); 
