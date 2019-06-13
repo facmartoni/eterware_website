@@ -1,10 +1,10 @@
 let allowSubmit = false; 
 
-const captchaFilled = () => {
+var captchaFilled = () => {
     allowSubmit = true; 
 }
 
-const captchaExpired = () => {
+var captchaExpired = () => {
     allowSubmit = false; 
 }
 
