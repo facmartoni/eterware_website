@@ -9,7 +9,7 @@ var captchaExpired = () => {
 }
 
 const checkIfCaptchaIsFilled = (event) => {
-    if(allowSubmit) sendEmail(); 
+    if(allowSubmit) sendEmail(event); 
     else{
         event.preventDefault(); 
         Swal.fire({
