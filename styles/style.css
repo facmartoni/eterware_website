@@ -822,12 +822,24 @@ form{
         margin-bottom: var(--space-small);
         padding-left: var(--space-small); 
     }
-
+    
     @media (--p768){
         margin-bottom: calc(var(--space-small) / 2); 
         font-size: var(--small); 
     }
+    
+}
 
+.recaptcha{
+    margin-bottom: var(--space-medium); 
+    
+    @media (--p480){
+        margin-bottom: var(--space-small);
+    }
+    
+    @media (--p768){
+        margin-bottom: calc(var(--space-small) / 2); 
+    }
 }
 
 /* Lo siguiente hace que desaparezca el placeholder cuando se hace focus en el input */

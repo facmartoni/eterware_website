@@ -38,6 +38,12 @@
     
     <!-- End Styles -->
 
+    <!-- Start reCAPTCHA -->
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- End reCAPTCHA -->
+
     <title>Eterware</title>
 
 </head>
@@ -279,6 +285,7 @@
             <input class="form_input" type="text" name="name_input" id="name_input" placeholder="Nombre" required>
             <input class="form_input" type="email" name="email_input" id="email_input" placeholder="Email" required>
             <textarea class="form_input textarea"type="text" name="message_input" id="message_input" placeholder="Mensaje" required></textarea>
+            <div class="g-recaptcha recaptcha" data-sitekey="6LcewqgUAAAAAM_XsAbSgO1NzKt3EZZPdifZ72Ny"></div>
             <input class="btn_enviar animated" onclick="sendEmail" id="button_send" type="submit" value="Enviar">
         </form>
     </div>
