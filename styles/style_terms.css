@@ -1,0 +1,19 @@
+.menu_anchor{
+    text-decoration: none; 
+}
+
+.home_return{
+    text-align: center; 
+    @media (--p1024){
+        font-size: var(--small); 
+    }
+}
+
+.terms_text{
+    text-align: left; 
+}
+
+.container{
+    display: flex; 
+    flex-direction: column; 
+}

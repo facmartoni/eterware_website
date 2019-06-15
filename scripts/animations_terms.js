@@ -3,14 +3,7 @@
 var controller = new ScrollMagic.Controller();
 
 const $logo = document.getElementById('logo'); 
-const $titles = document.getElementsByClassName('title'); 
-const $subtitles = document.getElementsByClassName('subtitle'); 
-const $texts = document.getElementsByClassName('text');
-const $smalls = document.getElementsByTagName('small'); 
-
-//Added
-
-const $resultImage = document.getElementById('result_image'); 
+const $titles = document.getElementsByClassName('menu_anchor'); 
 
 const applyAnimation = ($element, animationName, reverseValue = true, offsetValue = 50) => {
     new ScrollMagic.Scene({
@@ -33,9 +26,6 @@ const applyAnimationText = $list => {
 // Texts animations
 
 applyAnimationText($titles);
-applyAnimationText($subtitles);
-applyAnimationText($texts);
-applyAnimationText($smalls);
 
 // Header animations
 

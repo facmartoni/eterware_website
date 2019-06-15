@@ -1,0 +1,23 @@
+.menu_anchor{
+    text-decoration: none; 
+}
+
+.home_return{
+    text-align: center
+}
+
+.terms_text{
+    text-align: left; 
+}
+
+.container{
+    display: flex; 
+    flex-direction: column; 
+}
+
+@media screen and (min-width: 1024px){
+
+.home_return{
+        font-size: var(--small)
+} 
+    }

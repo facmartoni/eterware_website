@@ -200,7 +200,9 @@ h1{
 .container{
     grid-area: main; 
     margin: 16px; 
-    margin: var(--space-medium)
+    margin: var(--space-medium); 
+    margin-bottom: 8px; 
+    margin-bottom: var(--space-small)
 }
 
 .title{
@@ -538,8 +540,27 @@ textarea:focus:-ms-input-placeholder { color:transparent; }
 
 .thanks{
     text-align: center;
+    display: grid; 
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-areas: "text1 text1"
+                         "text2 text3";
     margin-top: 32px;
-    margin-top: var(--space-big);
+    margin-top: var(--space-big)
+}
+
+.thanks .text:nth-of-type(1){
+    grid-area: text1;
+}
+
+.thanks .text:nth-of-type(2){
+    justify-self: start; 
+    grid-area: text2; 
+}
+
+.thanks .text:nth-of-type(3){
+    justify-self: end; 
+    grid-area: text3; 
 }
 
 /* End thanks */
@@ -734,7 +755,8 @@ body{
 }
 
 .thanks .text{
-        margin-bottom: 0
+        margin-bottom: 8px;
+        margin-bottom: var(--space-small)
 } 
     }
 
@@ -1024,9 +1046,16 @@ form{
         width: 80px
 }
 
+.thanks{
+        grid-template-rows: 100%;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-areas: "text2 text1 text3"
+}
+
 .thanks .text{
-        font-size: 10px;
-        font-size: var(--small)
+        font-size: calc(10px - 6px);
+        font-size: calc(var(--small) - 6px);
+        margin-bottom: 0
 }
     }
 
