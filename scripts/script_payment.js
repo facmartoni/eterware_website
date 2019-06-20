@@ -14,8 +14,8 @@ const $anchorsSecondContainer = document.getElementById('anchors_second_containe
 
 // Variables varias
 
-const menuActiveImage = '../res/Menu_first_state.png';
-const menuDisableImage = '../res/Menu_second_state.png'; 
+var menuActiveImage = '../res/Menu_first_state.png';
+var menuDisableImage = '../res/Menu_second_state.png'; 
 
 // Media Queries
 

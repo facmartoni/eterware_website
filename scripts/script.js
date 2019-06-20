@@ -18,8 +18,8 @@ const $inputBody = document.getElementById('message_input');
 
 // Variables varias
 
-const menuActiveImage = './res/Menu_first_state.png';
-const menuDisableImage = './res/Menu_second_state.png'; 
+var menuActiveImage = './res/Menu_first_state.png';
+var menuDisableImage = './res/Menu_second_state.png'; 
 
 // Media Queries
 
@@ -75,6 +75,9 @@ const controlMenu = () => {
     }
 }
 
+var positiveMessage = 'Gracias por tu mensaje! Estamos en contacto ;)'; 
+var negativeMessage = 'Algo anda mal :/ Intentá mandándonos un email o llamándonos';
+
 const sendEmail = (event) => {
     event.preventDefault(); 
     Email.send({
@@ -91,7 +94,7 @@ const sendEmail = (event) => {
             Swal.fire({
                 position: 'center',
                 type: 'success',
-                text: 'Gracias por tu mensaje! Estamos en contacto ;)',
+                text: positiveMessage,
                 showConfirmButton: false,
                 timer: 3000
               })
@@ -100,7 +103,7 @@ const sendEmail = (event) => {
             Swal.fire({
                 position: 'center',
                 type: 'error',
-                text: 'Algo anda mal :/ Intentá mandándonos un email o llamándonos',
+                text: negativeMessage,
                 showConfirmButton: false,
                 timer: 4000
               })
@@ -111,7 +114,7 @@ const sendEmail = (event) => {
         Swal.fire({
             position: 'center',
             type: 'error',
-            text: 'Algo anda mal :/ Intentá mandándonos un email o llamándonos',
+            text: negativeMessage,
             showConfirmButton: false,
             timer: 2000
           })

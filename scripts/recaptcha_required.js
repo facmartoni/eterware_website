@@ -8,6 +8,8 @@ var captchaExpired = () => {
     allowSubmit = false; 
 }
 
+var captchaMessage = 'Completá el captcha!'; 
+
 const checkIfCaptchaIsFilled = (event) => {
     if(allowSubmit) sendEmail(event); 
     else{
@@ -15,7 +17,7 @@ const checkIfCaptchaIsFilled = (event) => {
         Swal.fire({
             position: 'center',
             type: 'warning',
-            text: 'Completá el captcha!',
+            text: captchaMessage,
             showConfirmButton: false,
             timer: 2000
           })
